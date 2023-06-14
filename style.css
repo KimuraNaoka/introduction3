@@ -113,8 +113,14 @@ header-item{
   padding:8px 0px;
   width:100%;
 }
+.search-box-flex{
+   display: flex;
+}
+
 .serarch-left{
    background-color:rgb(242, 242, 242);
+   padding:6px 0px 0px 6px;
+   width:100%;
 }
 
 .search-left-flex{
@@ -192,5 +198,3 @@ li {
   list-style:none;
 }
 
-/*メイン部分*/
-/*フッター*/
