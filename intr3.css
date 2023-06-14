@@ -1,0 +1,190 @@
+body {
+  background-image: url("background.png");
+  margin-right:0px;
+  margin-left:0px;
+}
+
+header{
+  background-color:white;
+  font-size:14px;
+
+}
+
+
+.header-top-flex{
+  display:flex;
+  align-items: center;
+  box-sizing: border-box;
+  font-family: "Source Sans Pro","Lucida Grande";
+  padding:8px 32px;
+  border-bottom:1px solid rgb(218, 218, 218);
+  max-width: 1536px;
+}
+
+.header-icon{
+  font-size:20px;
+  box-sizing: border-box;
+  padding-right:16px;
+
+}
+
+.header-logo{
+  text-align:left;
+  align-items: flex-start;
+  flex-direction: column;
+  font-family: "Poppoms";
+  font-size:14px;
+  font-stretch: 100%;
+  margin-right: auto;
+  padding:1px 6px;
+}
+
+
+.header-icon:hover{
+  color:gray;
+}
+
+.header-logo:hover{
+  color:gray;
+}
+
+
+.right-header{
+  font-weight: bolder;
+  display: flex;
+  flex-wrap: wrap;
+  margin:0px;
+}
+.header-menu{
+  padding:13px;
+   margin-right:10px; 
+}
+
+.header-menu:hover{
+  color:gray;
+}
+
+.header-bottom{
+  padding:10px 0px;
+}
+
+
+header-item{
+   padding:3px;
+   margin-right:10px;
+}
+
+.header-bottom{
+  padding:10px 0px;
+}
+
+.header-bottom-flex{
+  display:flex;
+  padding:0px 32px;
+  white-space: nowrap;
+}
+
+.npm-logo{
+  width:70px;
+  margin:0px;
+  padding-top:8px;
+}
+
+.npm-logo a{
+  padding:0px;
+  margin:0px;
+}
+
+.npm-logo-img{
+  padding-top:8px;
+  margin:0px 32px 0px 0px ;
+}
+
+
+.header-item:hover{
+  color: gray;
+}
+
+.search-box{
+  padding:8px 0px;
+  width:100%;
+}
+.serarch-left{
+   background-color:rgb(242, 242, 242);
+}
+
+.search-left-flex{
+  display:flex ;
+}
+
+
+.mark {
+  padding-top:8px;
+  margin:6px 4px 0px 16px;
+}
+
+input{
+  background-color:rgba(0, 0, 0, 0);
+  border:none;
+  margin:0px;
+  padding:1px 2px 1px 10px;
+  height:40px;
+  font-weight: 300;
+  text-align:start;
+  width:100%;
+}
+
+button{
+  color:white;
+  background-color:black;
+  margin:0px;
+  padding:10px 32px;
+  border:none;
+  font-size:14px;
+  font-weight: 700;
+  text-align:center;
+  font-stretch: 100%;
+  font-family: "Poppins";
+  border-style: none;
+  box-sizing: border-box;
+  width:150px;
+}
+
+.login{
+  margin-left: auto;
+  flex-grow:100%;
+  padding:8px 0px;
+  text-align:right ;
+}
+.login-flex{
+  display: flex;
+  align-items: center;
+  margin-left:16px;
+  font-weight:600;
+  padding-left:8px 0px;
+  text-align: right;
+}
+
+ .SignUp{
+  width:57.484px;
+  height:21px;
+  border:1px solid #cccccc;
+  margin-right: 16px;
+  padding:13px 28px;
+  text-align: right;
+  position: relative;
+  white-space: nowrap;
+ }
+
+ .SignIn {
+  padding:4px;
+  margin-right:16px;
+  white-space: nowrap
+ }
+
+
+
+li {
+  list-style:none;
+}
+
