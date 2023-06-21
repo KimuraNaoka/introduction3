@@ -156,6 +156,7 @@ header {
   top:10px;
   margin-right:10px;
   text-decoration: none;
+  z-index:13;
 }
 
 .main-body-m {
