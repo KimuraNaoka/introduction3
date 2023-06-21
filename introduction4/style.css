@@ -8,6 +8,7 @@
 }
 body{
   z-index: 10;
+  overflow:scroll;
 }
 
 body ul{
@@ -137,21 +138,22 @@ header {
 }
 
 .login-header-m {
-  background-color:#f7f7f7;
-  width:100%;
-  margin-left:calc( -50vw + 50% );
-  margin-right:calc( -50vw + 50% );
+  background-color:#ebebeb;
 }
 
 .login-title-m {
+  position:relative;
   font-size:1.1rem;
-  padding:20px;
+  padding:10px;
   margin:0px;
   text-align: center;
   z-index: 1;
 }
 
 .close-m {
+  position:absolute;
+  right:10px;
+  top:10px;
   margin-right:10px;
   text-decoration: none;
 }
