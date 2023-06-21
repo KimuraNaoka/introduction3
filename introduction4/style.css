@@ -137,7 +137,6 @@ header {
 }
 
 .login-header-m {
-  object-fit: contain;
   background-color:#f7f7f7;
   width:100%;
   margin-left:calc( -50vw + 50% );
@@ -145,7 +144,6 @@ header {
 }
 
 .login-title-m {
-  display:flow-root;
   font-size:1.1rem;
   padding:20px;
   margin:0px;
