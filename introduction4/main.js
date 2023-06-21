@@ -4,7 +4,7 @@ $(function(){
       return false;
   });
 
-  $('#js-close').on('click',function(){
+  $('#js-close, #js-overlay').on('click',function(){
     $('#js-modal, #js-overlay').fadeOut();
     return false;
   });
