@@ -1,6 +1,7 @@
 $(function(){
   $('#js-open').on('click',function(){
-      $('#js-modal, #js-overlay').fadeIn();
+      $('#js-modal').slideDown();
+      $('#js-overlay').fadeIn();
       return false;
   });
 
