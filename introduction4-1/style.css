@@ -1,0 +1,314 @@
+@media (max-width:765px){
+  .logo{
+    margin-right:auto;
+  }
+  .tab{
+      display:none;
+    }
+}
+body{
+  margin:0px;
+  z-index: 10;
+  width:100%;
+  height:auto;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+body ul{
+  list-style: none;
+}
+
+body a{
+  color:white;
+  text-decoration: none;
+}
+
+header {
+  background-color: #4cbfbf;
+  color:white;
+  font-size:14px;
+}
+
+.logo-text {
+  font-weight: 200;
+  padding-top:14px 20px;
+  text-align: center;
+  white-space:nowrap;
+}
+
+.logo-text a{
+  color:white;
+  text-decoration: none;
+  padding-left:20px;
+}
+
+.header-flex {
+  display:flex;
+}
+
+
+.item {
+  padding:14px 20px;
+  white-space: nowrap;
+}
+
+.item:hover{
+  background-color:#b0e7e7;
+}
+
+.tab {
+    margin-right:auto;
+}
+
+.tab-list-flex {
+  display: flex;
+}
+.tab-login{
+  justify-content: start;
+}
+
+.tab-login-flex {
+  display:flex;
+  justify-content: center;
+}
+
+
+.login {
+  padding:13px 15px 14px 15px;
+}
+
+.login-flex {
+  display:flex;
+}
+
+.menu-text{
+  padding-left:10px;
+  color:white;
+  text-decoration: none;
+  white-space:nowrap;
+}
+
+
+.newCreate {
+  background-color:#0B7DE0;
+  padding:13px 15px 14px 15px;
+}
+
+.newCreate-flex {
+  display: flex;
+}
+
+.login:hover {
+  background-color: #91dddd;
+}
+
+.newCreate:hover{
+  background-color: #0b7de071;
+}
+
+/** モーダル部分 **/
+.overlay {
+  position:absolute;
+  width:100%;
+  height:100%;
+  background:rgba(128, 128, 128, 0.400);
+  z-index: 11;
+  top:0;
+  left:0;
+
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.5s ease 0s;
+}
+
+.modal-wrap{
+  max-width: 600px;
+  margin:20px auto;
+  min-height: calc(100% -40px);
+  background-color:rgba(255, 255, 255, 0);
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.5s ease 0s;
+}
+
+
+.modal{
+  background-color:rgba(255, 255, 255);
+  position:relative;
+  width:100%;
+  z-index: 12;
+  overflow-x: hidden;
+  overflow-y: auto;
+
+  display:flex;
+  flex-direction: column;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.5s ease 0s;
+  transform:translateY(0px);
+}
+
+
+/*フェードダウン*/
+
+
+.modal.active{
+  opacity: 1;
+  pointer-events:auto;
+  transform:translateY(20px);
+}
+
+.overlay.active{
+  opacity: 1;
+  pointer-events:auto;
+}
+
+.modal p,h2,h3{
+  color:black;
+}
+
+.modal a {
+  color:black;
+}
+
+.login-header-m {
+  background-color:#ebebeb;
+}
+
+.login-title-m {
+  position:relative;
+  font-size:1.1rem;
+  padding:10px;
+  margin:0px;
+  text-align: center;
+  z-index: 1;
+}
+
+.close-m {
+  position:absolute;
+  right:10px;
+  top:10px;
+  margin-right:10px;
+  text-decoration: none;
+  z-index:13;
+}
+
+.main-body-m {
+  padding:30px;
+}
+
+.login-m {
+  padding:0px 30px;
+}
+
+.login-top-m {
+  font-size:1.3rem;
+  text-align: center;
+}
+
+.logo1-m, .logo2-m {
+  width:176px;
+  height:24px;
+  top:-1;
+}
+.login-char-m {
+  font-size:14px;
+  text-align: center;
+  margin-bottom:40px;
+}
+
+.login-text-m {
+  box-sizing:border-box;
+  text-align:center;
+  margin-bottom:40px;
+  border-bottom:1px solid rgb(76, 191, 191);
+}
+
+.input-flex-m {
+  display: flex;
+  align-items: center;
+  justify-content:space-between;
+  margin-bottom:20px;
+}
+
+.label-m {
+  white-space:nowrap;
+  min-width:200px;
+}
+
+.login-input-m {
+  padding:12px 15px;
+  border: 1px solid #dfdfdf;
+  border-radius: 6px;
+  width:100%;
+  box-sizing: border-box;
+}
+
+.login-input-m ::placeholder{
+  color:rgba(74,74,74,.25);
+}
+
+.align-center-m{
+  text-align: center;
+}
+
+.top-button-m, .bottom-button-m {
+  min-width:320px;
+  width:285px;
+  max-width:100%;
+  font-weight: bold;
+  padding:12px 30px;
+  border-radius: 4px;;
+  font-size:15px;
+}
+
+.top-button-m {
+  display: inline-block;
+  background-color: #26A69A;
+  color:white;
+  text-align: center;
+  border:none;
+  margin-top:30px;
+  margin-bottom:25px;
+}
+
+.bottom-button-m  {
+  padding:0px;
+  margin:auto;
+}
+
+.bottom-button-text-m {
+  display: block;
+  color:#26A69A;
+  border: 1px solid #ededed;
+  border-color: #ededed;
+  text-align: center;
+  text-decoration: none;
+  padding:10px 25px;
+}
+
+.tips-m {
+  background-color:#ededed;
+  padding:20px 40px;
+  margin:30px 0px 40px 0px;
+}
+
+.tip-title-m {
+  font-size:14px;
+  margin:0px;
+}
+
+.tip-list-m {
+  margin:0px;
+}
+
+.tip-list-item-m  {
+  margin:8px 0px;
+  list-style: none;
+}
+
+.tip-list-item-m ::before {
+  content:"» ";
+  color:#4cbfbf;
+}
