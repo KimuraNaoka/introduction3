@@ -1,12 +1,10 @@
 $(function(){
-  $('#js-open').on('click',function(){
-      $('#js-modal').slideDown();
-      $('#js-overlay').fadeIn();
+  $('.login').on('click',function(){
+      $('.modal, .overla').addClass('active');
       return false;
   });
 
-  $('#js-close, #js-overlay').on('click',function(){
-    $('#js-modal, #js-overlay').fadeOut();
-    return false;
+  $('.close-m, .overlay').on('click',function(){
+    $('.modal, .overlay').removeClass('active');
   });
 });

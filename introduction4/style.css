@@ -7,8 +7,12 @@
     }
 }
 body{
+  margin:0px;
   z-index: 10;
-  overflow:scroll;
+  width:100%;
+  height:auto;
+  overflow-x: hidden;
+  overflow-y: auto;
 }
 
 body ul{
@@ -105,28 +109,59 @@ header {
 
 /** モーダル部分 **/
 .overlay {
-  position:fixed;
+  position:absolute;
   width:100%;
   height:100%;
   background:rgba(128, 128, 128, 0.400);
   z-index: 11;
   top:0;
   left:0;
-  right:0;
-  display:none;
+
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.5s ease 0s;
 }
 
+.modal-wrap{
+  max-width: 600px;
+  margin:20px auto;
+  min-height: calc(100% -40px);
+  background-color:rgba(255, 255, 255, 0);
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.5s ease 0s;
+}
+
+
 .modal{
-  background-color:white;
-  margin:10px 0px 0xp 0px ;
-  position:fixed;
-  top:50%;
-  left:50%;
-  transform: translate(-50%, -50%);
-  z-index: 12;
+  background-color:rgba(255, 255, 255);
+  position:relative;
   width:100%;
-  max-width:60%;
-  display:none;
+  z-index: 12;
+  overflow-x: hidden;
+  overflow-y: auto;
+
+  display:flex;
+  flex-direction: column;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.5s ease 0s;
+  transform:translateY(0px);
+}
+
+
+/*フェードダウン*/
+
+
+.modal.active{
+  opacity: 1;
+  pointer-events:auto;
+  transform:translateY(20px);
+}
+
+.overlay.active{
+  opacity: 1;
+  pointer-events:auto;
 }
 
 .modal p,h2,h3{
@@ -276,10 +311,4 @@ header {
 .tip-list-item-m ::before {
   content:"» ";
   color:#4cbfbf;
-}
-
-.tip-link-m {
-  font-size:12px;
-  color:#424242;
-  text-decoration: underline;
 }
