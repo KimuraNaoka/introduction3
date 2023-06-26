@@ -1,6 +1,6 @@
 $(function(){
   $('.login').on('click',function(){
-      $('.modal, .overla').addClass('active');
+      $('.modal, .overlay').addClass('active');
       return false;
   });
 

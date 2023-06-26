@@ -5,8 +5,14 @@
   .tab{
       display:none;
     }
+
+    .tab-login {
+      margin-left:auto;
+    }
 }
 body{
+  font-family:'YakuHanJP','ヒラギノ角ゴPro W3','Hiragino Kaku Gothic Pro','メイリオ','Meiryo','ＭＳ Ｐゴシック','Verdana','Arial','Helvetica','sans-serif';
+  color: #424242;
   margin:0px;
   z-index: 10;
   width:100%;
@@ -30,17 +36,14 @@ header {
   font-size:14px;
 }
 
-.logo-text {
-  font-weight: 200;
-  padding-top:14px 20px;
-  text-align: center;
-  white-space:nowrap;
+.logo {
+  margin:12px 0px;
 }
 
-.logo-text a{
-  color:white;
-  text-decoration: none;
-  padding-left:20px;
+.logo-data{
+  margin-left: 4px;
+  width:130px;
+  vertical-align: bottom;
 }
 
 .header-flex {
@@ -112,7 +115,7 @@ header {
   position:absolute;
   width:100%;
   height:100%;
-  background:rgba(128, 128, 128, 0.400);
+  background-color:rgba(33,33,33,.9);
   z-index: 11;
   top:0;
   left:0;
@@ -134,6 +137,7 @@ header {
 
 
 .modal{
+  color:#424242;
   background-color:rgba(255, 255, 255);
   position:relative;
   width:100%;
@@ -164,22 +168,19 @@ header {
   pointer-events:auto;
 }
 
-.modal p,h2,h3{
-  color:black;
-}
-
 .modal a {
-  color:black;
+  color:#424242;
 }
 
 .login-header-m {
-  background-color:#ebebeb;
+  background-color:#f7f7f7;
 }
 
 .login-title-m {
+  color:#424242;
   position:relative;
   font-size:1.1rem;
-  padding:10px;
+  padding:20px 0px;
   margin:0px;
   text-align: center;
   z-index: 1;
@@ -188,10 +189,14 @@ header {
 .close-m {
   position:absolute;
   right:10px;
-  top:10px;
+  top:22px;
   margin-right:10px;
   text-decoration: none;
   z-index:13;
+}
+
+.close-m svg{
+    color:#BDBDBD;
 }
 
 .main-body-m {
@@ -203,8 +208,10 @@ header {
 }
 
 .login-top-m {
-  font-size:1.3rem;
+  font-size:1.5rem;
   text-align: center;
+  font-family:"YakuHanJP";
+  font-weight: 700;
 }
 
 .logo1-m, .logo2-m {
@@ -219,6 +226,8 @@ header {
 }
 
 .login-text-m {
+  font-family:"YakuHanJP";
+  font-weight: 700;
   box-sizing:border-box;
   text-align:center;
   margin-bottom:40px;
@@ -238,15 +247,20 @@ header {
 }
 
 .login-input-m {
-  padding:12px 15px;
+  color:rgba(161, 161, 161, 0.25);
+  padding:15px 12px 15px 5px;
   border: 1px solid #dfdfdf;
   border-radius: 6px;
   width:100%;
   box-sizing: border-box;
 }
 
-.login-input-m ::placeholder{
-  color:rgba(74,74,74,.25);
+.login-input-m::placeholder{
+  padding:12px 15px;
+  font-size:15px;
+  color: rgba(74,74,74,.25);
+  vertical-align: bottom;
+  text-align: left;
 }
 
 .align-center-m{
@@ -276,6 +290,7 @@ header {
 .bottom-button-m  {
   padding:0px;
   margin:auto;
+  color:#26A69A;
 }
 
 .bottom-button-text-m {
@@ -288,8 +303,12 @@ header {
   padding:10px 25px;
 }
 
+.fontcolor {
+  color:#26A69A;
+}
+
 .tips-m {
-  background-color:#ededed;
+  background-color:#f7f7f7;
   padding:20px 40px;
   margin:30px 0px 40px 0px;
 }
@@ -301,6 +320,7 @@ header {
 
 .tip-list-m {
   margin:0px;
+  padding-left:0px;
 }
 
 .tip-list-item-m  {
@@ -311,4 +331,9 @@ header {
 .tip-list-item-m ::before {
   content:"» ";
   color:#4cbfbf;
+}
+
+.tip-link-m {
+  font-size:12px;
+  text-decoration:underline solid;
 }
