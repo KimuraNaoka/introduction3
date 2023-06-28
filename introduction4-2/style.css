@@ -1,0 +1,202 @@
+body {
+  width: 100%;
+  background-color: #ebf3ff;
+  color: #323232;
+  font-family: 'Helvetica Neue', 'Helvetica', 'Arial', 'sans-serif';
+}
+
+.logo {
+  box-sizing: border-box;
+  display: block;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+}
+
+
+.main {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.main-flex {
+  width: 600px;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 24px;
+}
+
+.title {
+  color: rgb(37, 37, 37);
+  font-family: 'BlinkMacSystemFont', "Helvetica Neue", "ヒラギノ角ゴ ProN", "Hiragino Kaku Gothic ProN", 'Arial', 'メイリオ', 'Meiryo', sans-serif;
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.5rem;
+  margin-top: 16px;
+}
+
+.section {
+  width: 384px;
+  margin: 48px auto 24px;
+}
+
+.select {
+  margin-bottom: 29px;
+}
+
+.question {
+  margin: 0px 0px 12px 0px;
+  font-size: 14px;
+  color: rgb(122, 118, 109);
+}
+
+.item-flex {
+  display: flex;
+  margin: 0px 0px 8px 0px;
+  align-items: center;
+}
+
+.item-flex input {
+  height: 16px;
+  width: 16px;
+  margin-right: 8px;
+  vertical-align: baseline;
+}
+
+#solo,
+#corp {
+  margin: 3px 8px 3px 0px;
+}
+
+.bold-item {
+  font-size: 20px;
+  font-weight: bold;
+  margin: 0px;
+  vertical-align: bottom;
+}
+
+.sub-text {
+  margin: 0px;
+  vertical-align: bottom;
+}
+
+.input {
+  width: 100%;
+  box-sizing: border-box;
+  height: 36px;
+  margin: 0px 0px 10px 0px;
+  padding: 0px 8px;
+  font-size: 14px;
+  border-radius: 4px;
+  border: 1px solid rgb(235, 235, 235);
+  line-height: 18px;
+
+  outline: 0.3px solid rgba(0, 0, 0, 0);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+  transition: outline linear 0.2s, box-shadow linear 0.2s;
+}
+
+.input:focus {
+  outline: 0.3px solid red;
+  box-shadow: 0 0px 3px red;
+}
+
+.input.corp:focus {
+  outline: 0.3px solid rgba(86, 207, 255, 0.288);
+  box-shadow: 0 0px 5px rgba(86, 207, 255, 0.288);
+}
+
+
+.input::placeholder {
+  color: #d6d6d6;
+  transition: all 0.2s linear;
+}
+
+.input:focus::placeholder {
+  color: transparent;
+}
+
+
+
+.button {
+  font-weight: bold;
+  text-align: center;
+
+  border-style: none;
+  border-radius: 6px;
+  padding: 4px 12px;
+  margin: auto;
+  height: 48px;
+  width: 176px;
+  color: white;
+  background-color: #285ac8;
+}
+
+.text {
+  text-align: center;
+  font-size: 12px;
+  margin: 32px 0px;
+}
+
+.text-top {
+  margin: 0px;
+  padding: 0px;
+}
+
+.signin {
+  font-size: 13px;
+  margin-top: 0px;
+  margin-bottom: 10px;
+}
+
+.button-flex {
+  display: flex;
+  align-items: center;
+}
+
+.button {
+  font-weight: bold;
+  text-align: center;
+
+  border-style: none;
+  border-radius: 6px;
+  padding: 4px 12px;
+  margin: auto;
+  height: 48px;
+  width: 176px;
+  color: white;
+  background-color: #285ac8;
+}
+
+.tel-flex {
+  margin-bottom: 0px;
+  display: flex;
+  vertical-align: middle;
+  padding: 0px 8px 0px 0px;
+  width: 250px;
+}
+
+.tel-flex span {
+  margin: auto 8px;
+
+}
+
+.solo {
+  display: none;
+}
+
+.corp {
+  display: none;
+}
+
+.solo.appear {
+  display: block;
+}
+
+.corp.appear {
+  display: block;
+}
