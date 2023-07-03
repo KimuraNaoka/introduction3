@@ -9,9 +9,10 @@
 </head>
 
 <body>
+  <div class="header-none"></div>
   <div class="content">
     <span class="logo">
-      <svg class="logo-svg">
+      <svg class="logo-svg" viewBox="0 0 132 32">
         <title id="fci-Accounting_1__title">freee 会計</title>
         <path
           d="M10.84048,4.82736 L12.76624,14.73392 C12.95888,15.72464 12.30608,16.69264 11.31536,16.88528 L4.11056,18.2856 C3.11984,18.47824 2.15184,17.82512 1.95952,16.8344 L0.03376,6.92816 C-0.15888,5.93744 0.49392,4.96944 1.48464,4.7768 L8.68944,3.37648 C9.67984,3.18384 10.64816,3.83696 10.84048,4.82736 Z M5.023744,15.771552 C4.927104,15.274272 4.445504,14.949472 3.948224,15.046112 C3.450624,15.142752 3.125824,15.624352 3.222784,16.121632 C3.319424,16.618912 3.801024,16.944032 4.298304,16.847072 C4.795584,16.750432 5.120384,16.268832 5.023744,15.771552 Z M8.175936,15.158912 C8.079296,14.661632 7.597696,14.336832 7.100096,14.433152 C6.602816,14.530112 6.278016,15.011712 6.374656,15.508992 C6.471296,16.006272 6.952896,16.331392 7.450176,16.234432 C7.947776,16.137792 8.272576,15.656192 8.175936,15.158912 Z M11.327968,14.54624 C11.231328,14.04864 10.749728,13.72384 10.252448,13.82048 C9.754848,13.91744 9.430048,14.39904 9.526688,14.89632 C9.623328,15.3936 10.104928,15.7184 10.602208,15.62176 C11.099808,15.52512 11.424608,15.04352 11.327968,14.54624 Z M4.498592,13.069856 C4.401952,12.572576 3.920352,12.247776 3.423072,12.344096 C2.925472,12.441056 2.600672,12.922656 2.697632,13.419936 C2.794272,13.917216 3.275872,14.242336 3.773152,14.145376 C4.270432,14.048736 4.595232,13.567136 4.498592,13.069856 Z M7.650624,12.457184 C7.553984,11.959584 7.072384,11.634784 6.575104,11.731424 C6.077504,11.828384 5.752704,12.309984 5.849664,12.807264 C5.946304,13.304544 6.427904,13.629344 6.925184,13.532704 C7.422464,13.436064 7.747264,12.954464 7.650624,12.457184 Z M10.802816,11.844384 C10.706176,11.347104 10.224576,11.022304 9.726976,11.118944 C9.229696,11.215584 8.904896,11.697184 9.001536,12.194464 C9.098176,12.691744 9.579776,13.016864 10.077056,12.919904 C10.574656,12.823584 10.899456,12.341984 10.802816,11.844384 Z M3.97344,10.368128 C3.8768,9.870528 3.3952,9.546048 2.89792,9.642368 C2.40032,9.739328 2.07552,10.220928 2.17248,10.718208 C2.26912,11.215488 2.75072,11.540608 3.248,11.443648 C3.74528,11.347008 4.07008,10.865408 3.97344,10.368128 Z M7.125472,9.755328 C7.028832,9.258048 6.547232,8.933248 6.049952,9.029888 C5.552352,9.126528 5.227552,9.608128 5.324512,10.105408 C5.421152,10.602688 5.902752,10.927808 6.400032,10.830848 C6.897312,10.734528 7.222112,10.252928 7.125472,9.755328 Z M10.277504,9.142656 C10.180864,8.645376 9.699264,8.320576 9.201984,8.417216 C8.704384,8.513856 8.379584,8.995456 8.476544,9.492736 C8.573184,9.990016 9.054784,10.315136 9.552064,10.218176 C10.049344,10.121536 10.374144,9.639936 10.277504,9.142656 Z M9.034121,4.71888114 L8.952032,4.727328 L1.747232,6.127648 C1.499552,6.175968 1.336352,6.417888 1.384672,6.665568 L1.384672,6.665568 L1.647072,8.016288 C1.695392,8.263968 1.937312,8.427488 2.184992,8.379168 L2.184992,8.379168 L9.389792,6.978848 C9.637472,6.930528 9.800672,6.688608 9.752352,6.440928 L9.752352,6.440928 L9.489952,5.089888 C9.441632,4.842208 9.199712,4.679008 8.952032,4.727328 Z"
@@ -68,7 +69,9 @@
     </span>
     <div class="main">
       <div class="main-flex">
-        <form class="contents-select">
+
+        <!--フォーム-->
+        <form class="contents-select" name="content" id="form">
           <div>
             <h1 class="title">freeeアカウントの新規作成（無料）</h1>
           </div>
@@ -77,42 +80,24 @@
             <div class="select">
               <div class="question">事業形態</div>
               <div class="item-flex">
-                <input id="selc1" type="radio" name="select" value="個人事業主" checked>
+                <input id="selc1" type="radio" name="select" value="個人事業主" onchange="formSwitch()">
                 <p class="bold-item">個人事業主</p>
                 <p class="sub-text">（副業の確定申告も含む）</p>
               </div>
               <div class="item-flex">
-                <input id="selc2" type="radio" name="select" value="法人">
+                <input id="selc2" type="radio" name="select" value="法人" onchange="formSwitch()" checked>
                 <p class="bold-item">法人</p>
                 <p class="sub-text">（株式会社/合同会社/NPOなど）</p>
               </div>
             </div>
 
-            <div class="solo">
-              <div class="mail">
-                <div class="question">メールアドレス</div>
-                <input class="input" id="mailadress" type="email">
-              </div>
-              <div class="pass">
-                <div class="question">パスワード</div>
-                <input class="input" id="password" type="password" placeholder="8文字以上">
-                <input class="input" id="re-password" type="password" placeholder="もう一度入力してください">
-              </div>
-              <div class="text">
-                <p class="text-top">freeeに登録することで、以下に同意したものとみなします。</p>
-                <p class="signin">
-                  <a href="#">利用規約</a>、<a href="#">プライバシーポリシー</a>、<a href="#">電子決済代行業に係る表示</a>
-                </p>
-              </div>
-            </div>
-
-            <div class="corp">
-              <div class="name">
-                <div class="question corp">事業所名（社名）</div>
+            <div class="input-erea">
+              <div class="name corp">
+                <div class="question">事業所名（社名）</div>
                 <input class="input corp" type="text">
               </div>
-              <div class="count">
-                <div class="question corp">従業員数（経営者、役員を除く）</div>
+              <div class="count corp">
+                <div class="question">従業員数（経営者、役員を除く）</div>
                 <select class="input corp">
                   <option value>選択してください</option>
                   <option value="0">経営者のみ</option>
@@ -127,8 +112,8 @@
                   <option value="1">1001人以上</option>
                 </select>
               </div>
-              <div class="question corp">
-                <div class="year">設立年数</div>
+              <div class="year corp">
+                <div class="question">設立年数</div>
                 <select class="input corp">
                   <option value=>選択してください</option>
                   <option value="1">設立1年以内</option>
@@ -140,23 +125,51 @@
               </div>
               <div class="mail">
                 <div class="question">メールアドレス</div>
-                <input class="input" id="mailadress" type="email">
+                <input class="input" id="mailadress" type="email" required>
               </div>
-              <div class="question corp">
-                <div class="tel">電話番号</div>
+              <div class="tel corp">
+                <div class="question">電話番号</div>
                 <div class="tel-flex">
-                  <input class="input-tel input corp" type="tel">
+                  <div class="tel-box">
+                    <input class="input-tel input corp" id="tel1" type="tel" value="" required>
+                    <div class="error-tip" id="error1">
+                      <div class="error-tip-box">
+                        電話番号を入力してください
+                      </div>
+                    </div>
+                  </div>
                   <span> - </span>
-                  <input class="input-tel input corp" type="tel">
+                  <div class="tel-box">
+                    <input class="input-tel input corp" id="tel2" type="tel" value="" required>
+                    <div class="error-tip" id="error2">
+                      <div class="error-tip-box">
+                        電話番号を入力してください
+                      </div>
+                    </div>
+                  </div>
                   <span> - </span>
-                  <input class="input-tel input corp" type="tel">
+                  <div class="tel-box">
+                    <input class="input-tel input corp" id="tel3" type="tel" value="" required>
+                    <div class="error-tip" id="error3">
+                      <div class="error-tip-box">
+                        電話番号を入力してください
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
               <div class="pass">
                 <div class="question">パスワード</div>
-                <input class="input" id="password" type="password" placeholder="8文字以上">
-                <input class="input" id="re-password" type="password" placeholder="もう一度入力してください">
+                <input class="input" id="password" type="password" placeholder="8文字以上" required>
+                <input class="input" id="re-password" type="password" placeholder="もう一度入力してください" required>
               </div>
+            </div>
+
+            <div class="text">
+              <p class="text-top">freeeに登録することで、以下に同意したものとみなします。</p>
+              <p class="signin">
+                <a href="#">利用規約</a>、<a href="#">プライバシーポリシー</a>、<a href="#">電子決済代行業に係る表示</a>
+              </p>
             </div>
             <div class="button-flex">
               <button class="button" type="submit">freeeを始める</button>
