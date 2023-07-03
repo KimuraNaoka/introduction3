@@ -1,17 +1,30 @@
-console.log('test');
 
+//法人と個人の選択
 function formSwitch(){
-  console.log('test2');
   let select = document.getElementsByName('select');
   if(select[0].checked){
-    console.log('test3');
     $('.solo').addClass('appear');
     $('.corp').removeClass('appear');
   }else if (select[1].checked){
-    console.log('test4');
     $('.corp').addClass('appear');
     $('.solo').removeClass('appear');
   }
 }
 
-window.addEventListener('load',formSwitch());
+document.addEventListener('load',formSwitch());
+
+//入力欄のエラー表示
+
+
+
+//「電話番号を入力してください」の吹き出し表示
+function errorTip(){
+  $('.error-tip').addClass("action");
+}
+
+function errorRemove(){
+  $('.error-tip').removeClass('action');
+};
+
+document.addEventListener('mouseover', errorTip());
+document.addEventListener('mouseleave',errorRemove());

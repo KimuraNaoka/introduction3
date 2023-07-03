@@ -5,9 +5,22 @@ body {
   font-family: 'Helvetica Neue', 'Helvetica', 'Arial', 'sans-serif';
 }
 
+.header-none {
+  height: 40px;
+}
+
 .logo {
   box-sizing: border-box;
   display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.logo-svg {
+  text-align: center;
+  vertical-align: middle;
+  width: 198px;
+  height: 100px;
 }
 
 .content {
@@ -28,6 +41,7 @@ body {
   justify-content: center;
   align-items: center;
   padding: 24px;
+  margin-bottom: 200px;
 }
 
 .title {
@@ -101,6 +115,11 @@ body {
 }
 
 .input:focus {
+  outline: 0.3px solid rgba(86, 207, 255, 0.288);
+  box-shadow: 0 0px 3px rgba(86, 207, 255, 0.288);
+}
+
+.input:focus:invalid {
   outline: 0.3px solid red;
   box-shadow: 0 0px 3px red;
 }
@@ -125,7 +144,6 @@ body {
 .button {
   font-weight: bold;
   text-align: center;
-
   border-style: none;
   border-radius: 6px;
   padding: 4px 12px;
@@ -161,7 +179,6 @@ body {
 .button {
   font-weight: bold;
   text-align: center;
-
   border-style: none;
   border-radius: 6px;
   padding: 4px 12px;
@@ -173,6 +190,7 @@ body {
 }
 
 .tel-flex {
+  position: relative;
   margin-bottom: 0px;
   display: flex;
   vertical-align: middle;
@@ -182,7 +200,57 @@ body {
 
 .tel-flex span {
   margin: auto 8px;
+}
 
+.input-tel.action:invalid {
+  z-index: 20;
+  border: 1px solid red;
+  background-color: rgba(255, 0, 0, 0.068);
+}
+
+
+
+.error-tip {
+  border-radius: 3px;
+  box-shadow: 1px 1px 5px #323232;
+  font-size: 13px;
+  overflow-wrap: normal;
+  width: 80px;
+  height: auto;
+  padding: 5px;
+  min-width: 80px;
+  max-width: 300px;
+  color: white;
+  background-color: #e65a5a;
+  text-align: left;
+  z-index: 300;
+  position: absolute;
+  top: -80px;
+}
+
+#error1,
+#error2,
+#error3 {
+  display: none;
+}
+
+#error1.appear,
+#error2.appear,
+#error3.appear {
+  display: block;
+}
+
+.error-tip::after {
+  content: "";
+  border: 12px solid transparent;
+  border-top: 12px solid #e65a5a;
+  position: absolute;
+  top: 100%;
+  left: 19%;
+}
+
+.error-tip.action {
+  display: block;
 }
 
 .solo {
