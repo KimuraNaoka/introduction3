@@ -141,7 +141,7 @@ body {
 
 
 
-.button {
+#button {
   font-weight: bold;
   text-align: center;
   border-style: none;
@@ -152,6 +152,12 @@ body {
   width: 176px;
   color: white;
   background-color: #285ac8;
+  opacity: 0.2;
+}
+
+#button.action {
+  opacity: 1;
+  pointer-events: all;
 }
 
 .text {
@@ -176,18 +182,8 @@ body {
   align-items: center;
 }
 
-.button {
-  font-weight: bold;
-  text-align: center;
-  border-style: none;
-  border-radius: 6px;
-  padding: 4px 12px;
-  margin: auto;
-  height: 48px;
-  width: 176px;
-  color: white;
-  background-color: #285ac8;
-}
+
+/*電話番号*/
 
 .tel-flex {
   position: relative;
@@ -202,7 +198,9 @@ body {
   margin: auto 8px;
 }
 
-.input-tel.action:invalid {
+#tel1.action,
+#tel2.action,
+#tel3.action {
   z-index: 20;
   border: 1px solid red;
   background-color: rgba(255, 0, 0, 0.068);
@@ -249,9 +247,8 @@ body {
   left: 19%;
 }
 
-.error-tip.action {
-  display: block;
-}
+
+/*電話番号入力欄終わり*/
 
 .solo {
   display: none;
