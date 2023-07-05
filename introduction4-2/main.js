@@ -19,7 +19,7 @@ document.addEventListener('load',formSwitch());
         電話番号エラー表示
 ------------------------------*/
 $('#tel1').on('focus change',()=>{
-    if($('#tel1').val() == ""){
+    if($('#tel1').val() == "" ){
       $('#error1').addClass('appear');
       $('#tel1').addClass('action');
   }else{
@@ -58,33 +58,41 @@ $('#tel3').on('blur',()=>{
     $('#error3').removeClass('appear');
 });
 
+/*-------------------------------
+        パスワードエラー表示
+--------------------------------*/
+
+$('#password').on('change', ()=>{
+    let pass =  document.getElementById('password')
+    if(pass.value.length < 8 ){
+      $('.error-m1').addClass('appear');
+    }else{
+        $('.error-m1').removeClass('appear');
+    }
+
+    if($('#password').val() != $('#re-password').val()){
+      $('.error-m2').addClass('appear');
+    }else{
+      $('.error-m2').removeClass('appear');
+    }
+
+})
+
+$('#re-password').on('change', ()=>{
+    let rePass =  document.getElementById('re-password')
+
+  if($('#password').val() != $('#re-password').val()){
+      $('.error-m2').addClass('appear');
+    }else{
+      $('.error-m2').removeClass('appear');
+    }
+})
+
 
 
 
 /*-----------------------------
         送信ボタン制御
-
-           $('form input:required').change(function () {
-
-        let flag = true;
-
-        $('form input:required').each(function(e) {
-            //もし必須項目が空なら
-            if ($('form input:required').eq(e).val() === "") {
-                flag = false;
-            }
-        });
-        //全て埋まっていたら
-        if (flag) {
-          document.getElementById('button').style.disabled = false;
-          document.getElementById('button').style.opacity = 1;
-          document.getElementById('button').style.cursor= 'pointer';
-        }else {
-          document.getElementById('button').style.disabled = true;
-          document.getElementById('button').style.opacity = 0.2;
-          document.getElementById('button').style.cursor= 'none';
-        }
-      }
 ------------------------------*/
 
   let select = document.getElementsByName('select');
@@ -118,6 +126,13 @@ $('#tel3').on('blur',()=>{
         }
     });
   }else if(select[1].checked){
+      document.getElementById('name').required =true;
+      document.getElementById('count').required = true;
+      document.getElementById('year').required = true;
+      document.getElementById('tel1').required = true;
+      document.getElementById('tel2').required = true;
+      document.getElementById('tel3').required = true;
+
       $('form input:required').change(function () {
 
         let flag = true;

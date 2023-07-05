@@ -80,16 +80,16 @@
           <div class="section">
             <div class="select">
               <div class="question">事業形態</div>
-              <div class="item-flex">
+              <label class="item-flex">
                 <input id="selc1" type="radio" name="select" value="個人事業主" onchange="formSwitch()" checked>
                 <p class="bold-item">個人事業主</p>
                 <p class="sub-text">（副業の確定申告も含む）</p>
-              </div>
-              <div class="item-flex">
+              </label>
+              <label class="item-flex">
                 <input id="selc2" type="radio" name="select" value="法人" onchange="formSwitch()">
                 <p class="bold-item">法人</p>
                 <p class="sub-text">（株式会社/合同会社/NPOなど）</p>
-              </div>
+              </label>
             </div>
 
             <div class="input-erea">
@@ -132,7 +132,7 @@
                 <div class="question">電話番号</div>
                 <div class="tel-flex">
                   <div class="tel-box">
-                    <input class="input-tel input corp" id="tel1" type="tel" value="" required>
+                    <input class="input-tel input corp" id="tel1" type="tel " value="" pattern="^[0-9]+$" required>
                     <div class="error-tip" id="error1">
                       <div class="error-tip-box">
                         電話番号を入力してください
@@ -141,7 +141,7 @@
                   </div>
                   <span> - </span>
                   <div class="tel-box">
-                    <input class="input-tel input corp" id="tel2" type="tel" value="" required>
+                    <input class="input-tel input corp" id="tel2" type="tel" value="" pattern="^[0-9]+$" required>
                     <div class="error-tip" id="error2">
                       <div class="error-tip-box">
                         電話番号を入力してください
@@ -150,7 +150,7 @@
                   </div>
                   <span> - </span>
                   <div class="tel-box">
-                    <input class="input-tel input corp" id="tel3" type="tel" value="" required>
+                    <input class="input-tel input corp" id="tel3" type="tel" value="" pattern="^[0-9]+$" required>
                     <div class="error-tip" id="error3">
                       <div class="error-tip-box">
                         電話番号を入力してください
@@ -161,7 +161,9 @@
               </div>
               <div class="pass">
                 <div class="question">パスワード</div>
+                <div class="error-m1">8文字以上を設定してください</div>
                 <input class="input" id="password" type="password" placeholder="8文字以上" required>
+                <div class="error-m2">パスワードが一致しません</div>
                 <input class="input" id="re-password" type="password" placeholder="もう一度入力してください" required>
               </div>
             </div>

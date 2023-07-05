@@ -247,6 +247,21 @@ body {
   left: 19%;
 }
 
+.error-m1,
+.error-m2 {
+  color: red;
+  font-size: 12px;
+  display: none;
+}
+
+.error-m1.appear {
+  display: block;
+}
+
+.error-m2.appear {
+  display: block;
+}
+
 
 /*電話番号入力欄終わり*/
 
