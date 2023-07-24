@@ -1,0 +1,48 @@
+.flex-content {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+
+.send {
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 30px;
+  width: fit-content;
+  height: fit-content;
+}
+
+#img {
+  padding-top: 200px;
+  max-width: 300px;
+}
+
+.tips {
+  display: block;
+}
+
+#breed-input {
+  border-radius: 5px;
+  padding: 10px 20px;
+  margin-bottom: 20px;
+  border: 1px solid rgba(48, 144, 182, 0.233);
+  transition: border 0.5s 0s linear;
+
+}
+
+#breed-input:focus {
+  outline: none;
+  border: 1px solid rgb(35, 169, 223);
+}
+
+#submit {
+  margin-right: auto;
+  margin-left: auto;
+  display: block;
+  padding: 10px 20px;
+  color: white;
+  border-radius: 5px;
+  border: none;
+  background-color: rgb(50, 158, 158);
+}
