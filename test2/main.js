@@ -1,30 +1,26 @@
-let imgBox = document.getElementById("img-box");
-console.log(imgBox);
+const imgBox = document.getElementById("img-box");
 
 function createImage(imgPass) {
-  let image = document.createElement("img");
+  const image = document.createElement("img");
   image.className = "images";
   imgBox.appendChild(image);
   image.style.display = "block";
-
-  let imagePlm = new Promise((resolve, reject) => {
-    resolve((image.src = imgPass));
-    reject(error);
+  const imagePromise = new Promise((resolve, reject) => {
+    if (imgPass) {
+      image.src = imgPass;
+      resolve(image);
+    } else {
+      reject(Error);
+    }
   });
-  return imagePlm;
+  return imagePromise;
 }
 
-async function wait(s) {
+function wait(s) {
   return new Promise((resolve) => setTimeout(resolve, s * 1000));
 }
-/*  確認
-console.log(1);
-wait(2).then((data) => {
-  console.log(data, 2);
-});
-*/
 
-function deleteImg() {
+function hiddenImg() {
   let img = document.querySelectorAll("img");
   img.forEach((element) => {
     element.style.display = "none";
@@ -32,33 +28,23 @@ function deleteImg() {
 }
 
 createImage("img/3_image.jpeg")
-  .then((data) => {
-    console.log(data);
-  })
   .then(() => {
-    console.log("完了");
-  })
-  .then(() => {
+    console.log("waiting");
     return wait(2);
   })
   .then(() => {
-    console.log("2秒後");
-  })
-  .then(() => {
-    deleteImg();
+    hiddenImg();
   })
   .then(() => {
     createImage("img/4_image.jpeg");
   })
   .then(() => {
-    console.log("完了");
-  })
-  .then(() => {
+    console.log("waiting");
     return wait(2);
   })
   .then(() => {
-    console.log("2秒後");
+    hiddenImg();
   })
-  .then(() => {
-    deleteImg();
+  .catch(() => {
+    console.log("error!!");
   });
