@@ -1,19 +1,16 @@
 const imgBox = document.getElementById("img-box");
+const image = document.createElement("img");
 
 function createImage(imgPass) {
-  const image = document.createElement("img");
-  image.className = "images";
-  imgBox.appendChild(image);
-  image.style.display = "block";
-  const imagePromise = new Promise((resolve, reject) => {
-    if (imgPass) {
-      image.src = imgPass;
+  image.src = imgPass;
+  return new Promise((resolve) => {
+    image.addEventListener("load", () => {
+      image.className = "images";
+      imgBox.appendChild(image);
+      image.style.display = "block";
       resolve(image);
-    } else {
-      reject(Error);
-    }
+    });
   });
-  return imagePromise;
 }
 
 function wait(s) {

@@ -3,7 +3,7 @@ const breed = document.getElementById("breed-input");
 const image = document.getElementById("img");
 
 button.addEventListener("click", () => {
-  let url = "https://dog.ceo/api/breed/" + breed.value + "/images/random";
+  const url = "https://dog.ceo/api/breed/" + breed.value + "/images/random";
   console.log(url);
   fetch(url)
     .then((response) => {
