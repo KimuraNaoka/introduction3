@@ -26,6 +26,7 @@ class imageContent {
     return new Promise((resolve) => setTimeout(resolve, s * 1000));
   }
 }
+
 function deleteImg() {
   let img = document.querySelectorAll("img");
   img.forEach((element) => {
